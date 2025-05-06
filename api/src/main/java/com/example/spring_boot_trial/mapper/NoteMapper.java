@@ -2,6 +2,7 @@ package com.example.spring_boot_trial.mapper;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.mybatis.dynamic.sql.select.render.SelectStatementProvider;
 
 import com.example.spring_boot_trial.model.NoteModel;
 
@@ -21,4 +22,6 @@ public interface NoteMapper {
             )
             """)
     public void insert(NoteModel note);
+
+    public NoteModel select(SelectStatementProvider stmt);
 }
