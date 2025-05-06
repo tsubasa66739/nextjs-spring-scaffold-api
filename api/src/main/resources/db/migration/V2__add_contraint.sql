@@ -1,0 +1,1 @@
+ALTER TABLE mst_user ADD CONSTRAINT user_email_uidx UNIQUE (email);

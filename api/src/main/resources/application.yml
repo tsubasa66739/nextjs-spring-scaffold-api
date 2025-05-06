@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: nextjs-spring-scaffold-api
+
+  datasource:
+    driver: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=public
+    username: postgres
+    password: ideas
+
+  sql:
+    init:
+      mode: always
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
