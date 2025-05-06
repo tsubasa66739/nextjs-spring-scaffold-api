@@ -33,6 +33,9 @@ public class NoteRepository {
         var stmt = SqlBuilder
             .insert(model)
             .into(note)
+            .map(note.title).toProperty("title")
+            .map(note.content).toProperty("content")
+            .map(note.userId).toProperty("userId")
             .build().render(RenderingStrategies.MYBATIS3);
         mapper.insert(stmt);
     }
